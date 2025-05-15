@@ -1,16 +1,16 @@
 resource "aws_s3_bucket" "s3_bucket_billing" {
-  bucket = "s3_bucket_billing"
+  bucket = "s3-bucket-billing"
 
 }
 
 resource "aws_s3_bucket" "s3_bucket_cloudtrail_event_detection" {
-  bucket = "s3_bucket_account_logs_insights"
+  bucket = "s3-bucket-account-logs-insights"
 
 }
 
 
 resource "aws_s3_bucket_policy" "s3_access_policy" {
-  bucket = aws_s3_bucket.s3_bucket_billing.id
+  bucket = aws-s3-bucket.s3_bucket-billing.id
 
   policy = <<EOF
 
